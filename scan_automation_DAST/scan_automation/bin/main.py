@@ -19,11 +19,11 @@ def main():
 
     # Get connection info
     if settings.get("connection"):
-        api_key = settings.get("connection").get("api_key")
-        region = settings.get("connection").get("region", "us")
+        api_key = settings.get("connection").get("dastrole")
+        region = settings.get("connection").get("region", "us3")
     else:
         api_key = None
-        region = "us"
+        region = "us3"
 
     # Prompt user for API key if there isn't one configured
     if api_key is None:
